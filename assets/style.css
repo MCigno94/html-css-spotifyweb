@@ -1,6 +1,9 @@
+/* #region COMMON */
+
 :root {
     --bk-primary: #141922;
     --bk-secondary: #282828;
+    --bk-dark: black;
     --light: #5A5A5A;
     --primary_txt-color: white;
     --secondary_txt-color: #A3A3A3;
@@ -13,3 +16,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* #endregion COMMON */
+
+
+/* region CONTAINER */
+
+.container {
+    width: 100vw;
+    height: 3000px;
+    background-color: #ADFF2F;
+}
+
+.site_main::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.site_main {
+    width: 75%;
+    height: 100%;
+    background-color: var(--bk-primary);
+    float: right;
+    position: relative;
+}
+
+.left_bar {
+    width: 25%;
+    height: calc(100vh - 100px);
+    background-color: var(--bk-dark);
+    float: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.top_bar {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.555);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.home_view {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+
+
+/* endregion CONTAINER */
+
+
+/* #region FOOTER */
+
+.site_footer {
+    width: 100%;
+    height: 100px;
+    background-color: var(--bk-secondary);
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+}
+
+
+/* #ENDregion FOOTER */
