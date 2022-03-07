@@ -98,6 +98,7 @@ aside li {
 
 header.top_left_bar .logo img:first-child {
     width: 60%;
+    max-height: 60px;
     display: inherit;
     margin: 0.25rem auto;
 }
