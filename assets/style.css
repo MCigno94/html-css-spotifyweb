@@ -58,12 +58,20 @@ a {
     margin-top: 1rem;
 }
 
+.m_l {
+    margin-left: 1rem;
+}
+
 .m_r-icon {
     margin-right: 0.5rem;
 }
 
 .p_t-b {
     padding: 0.25rem 0;
+}
+
+.txt_r {
+    text-align: right;
 }
 
 .txt_c {
@@ -82,6 +90,17 @@ a {
     display: flex;
 }
 
+.subtitle {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: var(--secondary_txt-color);
+}
+
+.small_sz {
+    display: none;
+}
+
 
 /* #endregion UTILITY */
 
@@ -94,6 +113,7 @@ a {
 .container {
     width: 100%;
     height: auto;
+    flex-wrap: wrap;
 }
 
 
@@ -101,10 +121,12 @@ a {
 
 aside li {
     display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .left_bar {
-    width: 50px;
+    width: 35px;
     height: calc(100vh - 80px);
     background-color: var(--bk-dark);
     flex-wrap: wrap;
@@ -112,8 +134,12 @@ aside li {
     align-content: space-between;
 }
 
+.logo {
+    margin-bottom: 1rem;
+}
+
 header.top_left_bar .logo img:first-child {
-    width: 55%;
+    width: 25px;
     max-height: 60px;
     display: inherit;
     margin: 0.25rem auto;
@@ -131,9 +157,10 @@ header.top_left_bar .logo img:last-child {
     display: none;
 }
 
-.home_action i {
-    font-size: 1.25rem;
-    margin: 5px auto;
+.home_action img,
+.user img {
+    width: 20px;
+    height: 20px;
 }
 
 .top_left_bar .playlist ul li:first-child {
@@ -145,8 +172,7 @@ header.top_left_bar .logo img:last-child {
     line-height: 2rem;
 }
 
-.top_left_bar .playlist i,
-.install i {
+.top_left_bar .playlist i {
     background-color: var(--secondary_txt-color);
     color: var(--bk-dark);
 }
@@ -161,25 +187,20 @@ header.top_left_bar .logo img:last-child {
 
 .footer_left_bar {
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
 }
 
-.install {
-    margin-bottom: 0.5rem;
-}
-
-.install i {
-    padding: 0.1rem;
-    border-radius: 50%;
+.install img {
+    width: 15px;
 }
 
 .user {
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
     align-items: center;
 }
 
-.user i {
+.user img {
     background-color: var(--secondary_txt-color);
     border-radius: 50%;
 }
@@ -201,43 +222,37 @@ header.top_left_bar .logo img:last-child {
 /* #region MAIN */
 
 .site_main {
-    height: 100%;
-    position: relative;
+    width: calc(100vw - 35px);
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
-.site_main,
+.home_view,
 .top_bar {
-    width: calc(100% - 50px);
+    width: calc(100vw - 35px);
 }
 
 .top_bar {
-    height: 80px;
+    height: 65px;
     background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    z-index: 5;
 }
-
-
-/* header.top_bar {
-    position: relative;
-} */
 
 .btn_upgrade {
     border: 1px solid white;
     border-radius: 30px;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    padding: 0.75rem 2.25rem;
+    font-size: 8px;
+    padding: 7px 20px;
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
 
 .home_view {
-    width: 100%;
-    position: absolute;
-    top: 80px;
+    height: calc(100% - 65px);
+    overflow: auto;
 }
 
 nav.navbar ul {
@@ -246,36 +261,38 @@ nav.navbar ul {
 }
 
 nav.navbar ul li {
-    padding: 1rem;
+    padding: 7px;
 }
 
 nav.navbar ul li a {
     color: var(--secondary_txt-color);
     font-weight: bold;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 .section_song {
     padding: 1rem;
 }
 
-.section_song .subtitle {
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0.5rem 0;
-    color: var(--secondary_txt-color);
+.section_song:nth-child(4) img {
+    border-radius: 50%;
 }
 
 .section_song span.subtitle {
     padding-top: 1rem;
 }
 
-.row h2 {
-    font-size: 1.3rem;
+.section_song h2 {
+    font-size: 1rem;
+}
+
+aside .row,
+main .row {
+    overflow: auto;
+    padding: 0.5rem 0;
 }
 
 .cards ul {
-    overflow: auto hidden;
     column-gap: 0.75rem;
 }
 
@@ -283,26 +300,14 @@ nav.navbar ul li a {
     width: 200px;
     height: auto;
     min-width: 150px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     flex-wrap: wrap;
-}
-
-.card img:not(.card .album img) {
-    min-width: 120px;
 }
 
 .card h3 {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: white;
     margin-top: 1rem;
-}
-
-.album {
-    flex-wrap: wrap;
-}
-
-.album img {
-    width: 50%;
 }
 
 
@@ -315,9 +320,113 @@ nav.navbar ul li a {
     width: 100%;
     height: 80px;
     background-color: var(--bk-secondary);
-    position: fixed;
-    bottom: 0;
-    z-index: 5;
+    padding: 0.75rem;
+}
+
+footer .row {
+    height: 100%;
+    justify-content: space-between;
+}
+
+.footer_sx,
+.footer_main,
+.footer_dx {
+    width: auto;
+    height: 100%;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.footer_sx img {
+    width: 25px;
+}
+
+footer .footer_sx h3 {
+    font-size: 12px;
+}
+
+footer .footer_sx .subtitle {
+    margin: 0;
+    font-size: 10px;
+}
+
+.footer_sx .icon_action i,
+.footer_sx .title_song i {
+    color: var(--secondary_txt-color);
+}
+
+.footer_sx .icon_action i,
+.footer_sx .title_song i,
+.footer_dx i {
+    font-size: small;
+}
+
+.footer_main {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song_buttons i:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+.forward_sx,
+.forward_dx {
+    padding: 0 0.75rem;
+}
+
+.forward_sx {
+    transform: rotate(180deg);
+}
+
+.song_length {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song_length>div {
+    display: inline-block;
+}
+
+.lengh {
+    width: 100px;
+    height: auto;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.full_lengh {
+    width: 100%;
+    height: 2px;
+    background-color: var(--light);
+    position: absolute;
+}
+
+.lengh_15 {
+    width: 15%;
+    height: 2px;
+    background-color: var(--success-color);
+    position: absolute;
+}
+
+.song_length i,
+.footer_dx .lengh i {
+    font-size: 8px;
+    position: absolute;
+    left: 15%;
+    transform: translate(0, -3px);
+}
+
+.song_length div:first-child,
+.song_length div:last-child {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.footer_dx .lengh {
+    width: 50px;
 }
 
 
