@@ -20,30 +20,30 @@
         <aside class="left_bar d_flex txt_lighter">
             <header class="top_left_bar w_100">
                 <div class="logo">
-                    <img src="./assets/img/logo-small.svg" alt="">
-                    <img src="./assets/img/logo.svg" alt="">
+                    <img src="./assets/img/logo-small.svg" alt="logo">
+                    <img class="small_sz" src="./assets/img/logo.svg" alt="logo">
                 </div>
                 <!-- /.logo -->
                 <div class="home_action">
                     <ul>
                         <li>
                             <img src="./assets/img/home.svg" alt="">
-                            <a href="">Home</a>
+                            <a class="small_sz" href="">Home</a>
                         </li>
                         <li>
                             <img src="./assets/img/search.svg" alt="">
-                            <a href="">Cerca</a>
+                            <a class="small_sz" href="">Cerca</a>
                         </li>
                         <li>
                             <img src="./assets/img/libreria.svg" alt="">
-                            <a href="">La tua libreria</a>
+                            <a class="small_sz" href="">La tua libreria</a>
                         </li>
                     </ul>
                 </div>
                 <!-- /.home_action -->
-                <div class="playlist m_top">
+                <div class="playlist m_top txt_white small_sz">
                     <h3>PLAYLIST</h3>
-                    <ul class="m_top">
+                    <ul>
                         <li>
                             <i class="fas fa-plus m_r-icon"></i>
                             <a class="m_r-icon" href="#">Crea playlist</a>
@@ -76,15 +76,15 @@
             <!-- /.top_left_bar -->
 
             <footer class="footer_left_bar d_flex w_100">
-                <div class="install">
+                <div class="install d_flex">
                     <img src="./assets/img/download.svg" alt="">
-                    <a href="#">Installa app</a>
+                    <a class="small_sz" href="#">Installa app</a>
                 </div>
                 <!-- /.install -->
-                <hr class="w_100">
+                <hr class="w_100 small_sz">
                 <div class="user d_flex">
                     <img src="./assets/img/profile.svg" alt="">
-                    <a class="txt_white m_r-icon" href="#">Mattia Cigno</a>
+                    <a class="txt_white m_r-icon small_sz" href="#">Mattia Cigno</a>
                 </div>
             </footer>
             <!-- /.footer_left_bar -->
@@ -216,9 +216,11 @@
             <div class="row d_flex">
                 <div class="footer_sx d_flex">
                     <img src="./assets/img/sinister.jpeg" alt="">
-                    <div class="title_song">
-                        <h3 class="txt_white small_sz">Sinister</h3>
-                        <div class="subtitle small_sz">Brano Nome</div>
+                    <div class="title_song dropdown d_flex">
+                        <div class="dropdown-content">
+                            <h3 class="txt_white">Sinister</h3>
+                            <div class="subtitle">Brano <br> Nome</div>
+                        </div>
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
                     <div class="icon_action small_sz">
@@ -244,7 +246,7 @@
                         <div class="seconds_pass">0:25</div>
                         <div class="lengh">
                             <div class="full_lengh"></div>
-                            <div class="lengh_15 small_sz"></div>
+                            <div class="lengh_15"></div>
                             <i class="fas fa-dot-circle small_sz"></i>
                         </div>
                         <div class="total_seconds">4:35</div>
@@ -255,11 +257,11 @@
                 <div class="footer_dx d_flex txt_white txt_r">
                     <i class="fas fa-bars small_sz"></i>
                     <i class="fas fa-desktop small_sz"></i>
-                    <i class="fas fa-volume-up"></i>
-                    <div class="lengh">
+                    <i class="fas fa-volume-up dropdown"></i>
+                    <div class="lengh dropdown-content small_sz">
                         <div class="full_lengh"></div>
-                        <div class="lengh_15 small_sz"></div>
-                        <i class="fas fa-dot-circle small_sz"></i>
+                        <div class="lengh_15"></div>
+                        <i class="fas fa-dot-circle"></i>
                     </div>
                 </div>
                 <!-- /.footer_dx -->
