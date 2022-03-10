@@ -320,6 +320,18 @@
         margin-top: 1rem;
         flex-wrap: wrap;
         transition: all 1s;
+        position: relative;
+    }
+    
+    .card i {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 50px;
+        color: white;
+        display: none;
+        transition: all 2s;
     }
     
     .card h3 {
@@ -488,8 +500,12 @@
         color: white;
     }
     
+    .card:hover i {
+        display: block;
+    }
+    
     .card:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         border-radius: 50%;
     }
     
