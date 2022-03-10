@@ -45,13 +45,13 @@
             </header>
             <!-- /.top_left_bar -->
 
-            <div class="main_left_bar w_100 small_sz">
+            <main class="main_left_bar w_100 small_sz">
                 <div class="playlist txt_white small_sz">
                     <h3>PLAYLIST</h3>
                     <div class="add_playlist">
                         <i class="fas fa-plus m_r-icon"></i>
                         <a class="m_r-icon" href="#">Crea playlist</a>
-                        <i class="fas fa-bars small_sz"></i>
+                        <i id="tap" class="fas fa-bars small_sz"></i>
                     </div>
                     <ul>
                         <li>
@@ -104,7 +104,7 @@
                     <!-- /.dropdown -->
                 </div>
                 <!-- /.playlist -->
-            </div>
+            </main>
             <!-- /.main_left_bar -->
 
             <footer class="footer_left_bar d_flex w_100">
@@ -247,13 +247,21 @@
         <footer class="site_footer">
             <div class="row d_flex">
                 <div class="footer_sx d_flex">
+
                     <img src="./assets/img/sinister.jpeg" alt="">
-                    <div class="title_song dropdown d_flex">
-                        <div class="dropdown-content">
+                    <div class="title_song d_flex">
+                        <div class="visibility small_sz">
                             <h3 class="txt_white">Sinister</h3>
                             <div class="subtitle">Brano <br> Nome</div>
                         </div>
                         <i class="fas fa-ellipsis-h"></i>
+                        <div class="dropdown small_sz">
+                            <div class="dropdown-content">
+                                <h3 class="txt_white">Sinister</h3>
+                                <div class="subtitle">Brano <br> Nome</div>
+                            </div>
+                        </div>
+                        <!-- /.dropdown -->
                     </div>
                     <div class="icon_action small_sz">
                         <div class="like">
@@ -263,8 +271,10 @@
                             <i class="far fa-folder"></i>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.footer_sx -->
+
                 <div class="footer_main d_flex txt_white">
                     <div class="song_buttons">
                         <i class="fas fa-random"></i>
@@ -286,6 +296,7 @@
                     <!-- /.song_length -->
                 </div>
                 <!-- /.footer_main -->
+
                 <div class="footer_dx d_flex txt_white txt_r">
                     <i class="fas fa-bars small_sz"></i>
                     <i class="fas fa-desktop small_sz"></i>
@@ -293,7 +304,7 @@
                     <div class="lengh dropdown-content small_sz">
                         <div class="full_lengh"></div>
                         <div class="lengh_15"></div>
-                        <i class="fas fa-dot-circle"></i>
+                        <i class="fas fa-dot-circle small_sz"></i>
                     </div>
                 </div>
                 <!-- /.footer_dx -->
