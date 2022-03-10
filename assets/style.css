@@ -314,9 +314,9 @@
     }
     
     .card {
-        width: 150px;
+        width: 200px;
         height: auto;
-        min-width: 150px;
+        min-width: 200px;
         margin-top: 1rem;
         flex-wrap: wrap;
         transition: all 1s;
@@ -495,7 +495,7 @@
     
     .card:hover img {
         border-radius: 50%;
-        transition: all 0.5s;
+        transition: all 1s;
     }
     
     .footer_sx .title_song:hover .dropdown.small_sz {
@@ -508,6 +508,14 @@
         box-shadow: 0px 0px 5px 0px rgba(143, 143, 143, 0.644);
         padding: 0.75rem;
         text-align: center;
+    }
+    
+    .lengh:hover .lengh_15 {
+        background-color: var(--success-color);
+    }
+    
+    .lengh:hover .fa-dot-circle {
+        display: block;
     }
     /* #endregion Effect */
     /* #region MediaQuery */
@@ -652,8 +660,8 @@
             margin-top: 1rem;
         }
         .card {
-            width: 200px;
-            min-width: 200px;
+            width: 250px;
+            min-width: 250px;
         }
         .card h3 {
             font-size: 1rem;
@@ -683,10 +691,58 @@
         }
     }
     
-    @media screen and (min-width: 768px) and (min-height: 568px) {
-        .card {
+    @media screen and (min-width: 1200px) {
+        /* aside */
+        .left_bar {
             width: 250px;
-            min-width: 250px;
+            padding: 1rem 1rem 0;
+        }
+        header.top_left_bar .logo img:last-child {
+            height: 40px;
+            width: auto;
+        }
+        /* main */
+        .site_main {
+            width: calc(100vw - 250px);
+        }
+        .section_song {
+            margin-top: 1rem;
+        }
+        .card {
+            width: 300px;
+            min-width: 300px;
+        }
+        .card h3 {
+            font-size: 1rem;
+            color: white;
+            margin-top: 1rem rem;
+        }
+        .subtitle {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        /* Footer */
+        .footer_sx,
+        .footer_dx {
+            column-gap: 0.75rem;
+        }
+        .footer_sx {
+            justify-content: start;
+            column-gap: 0.75rem;
+        }
+        .footer_sx .dropdown .dropdown-content,
+        .icon_action.small_sz {
+            display: block;
+        }
+        .footer_dx {
+            justify-content: end;
+        }
+    }
+    
+    @media screen and (max-height: 568px) {
+        .card {
+            width: 200px;
+            min-width: 200px;
         }
     }
     /* #endregion MediaQuery */
