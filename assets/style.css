@@ -268,6 +268,26 @@
         overflow: auto;
     }
     
+    .home_view::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* scrollbar */
+    
+    .home_view::-webkit-scrollbar-track {
+        background-color: #3b3f46;
+    }
+    /* sfondo delle scrollbar */
+    
+    .home_view::-webkit-scrollbar-thumb {
+        background-color: #0c0f14;
+    }
+    /* colore delle scrollbar */
+    
+    .home_view::-webkit-scrollbar-button {
+        background-color: var(--secondary_txt-color);
+    }
+    /* bottoni alle estremità delle scrollbars */
+    
     nav.navbar ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -291,8 +311,10 @@
         border-radius: 50%;
     }
     
-    .section_song span.subtitle {
-        padding-top: 1rem;
+    .section_song h2,
+    .section_song .subtitle,
+    .cards {
+        margin-left: 10px;
     }
     
     .section_song h2 {
@@ -304,6 +326,27 @@
         overflow: auto;
         padding: 0.5rem 0;
     }
+    
+    .row::-webkit-scrollbar {
+        height: 8px;
+    }
+    /* scrollbar */
+    
+    .row::-webkit-scrollbar-track {
+        background-color: #3b3f46;
+    }
+    /* sfondo delle scrollbar */
+    
+    .row::-webkit-scrollbar-thumb {
+        background-color: #0c0f14;
+    }
+    /* colore delle scrollbar */
+    
+    .row::-webkit-scrollbar-button {
+        width: 8px;
+        background-color: var(--secondary_txt-color);
+    }
+    /* bottoni alle estremità delle scrollbars */
     
     .cards {
         transition: all 1s;
@@ -325,12 +368,12 @@
     
     .card i {
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%);
-        font-size: 50px;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
         color: white;
-        display: none;
+        filter: opacity(0.0);
         transition: all 2s;
     }
     
@@ -338,6 +381,11 @@
         font-size: 0.75rem;
         color: white;
         margin-top: 1rem;
+    }
+    
+    .image {
+        position: relative;
+        transition: all 1s;
     }
     /* #endregion MAIN */
     /* #endregion CONTAINER */
@@ -474,6 +522,13 @@
     /* #endregion FOOTER */
     /* #region Effect */
     
+    * a:hover:not(.add_playlist>a) {
+        background-color: #303b5088;
+        padding: 2px;
+        color: white;
+        transition: all 0.2s;
+    }
+    
     .playlist:hover .dropdown {
         display: block;
         width: 80%;
@@ -491,6 +546,12 @@
         border-bottom: 1px solid var(--success-color);
     }
     
+    .add_playlist i:first-child:hover {
+        font-size: 1.25rem;
+        filter: invert(1);
+        transition: all 1s;
+    }
+    
     .btn_upgrade:hover {
         transform: scale(1.2);
     }
@@ -498,20 +559,33 @@
     nav ul li:hover a {
         font-size: 14px;
         color: white;
+        transition: all 1s;
     }
     
     .card:hover i {
         display: block;
+        font-size: 80px;
+        filter: opacity(1);
     }
     
-    .card:hover {
+    .card:hover .image {
         transform: scale(1.05);
         border-radius: 50%;
     }
     
     .card:hover img {
         border-radius: 50%;
-        transition: all 1s;
+        filter: blur(2px);
+        transition: all 1.5s;
+    }
+    
+    .card:active .image {
+        transform: scale(0.9);
+        transition: all 0.3s;
+    }
+    
+    .card:active img {
+        filter: blur(0);
     }
     
     .footer_sx .title_song:hover .dropdown.small_sz {
@@ -524,6 +598,11 @@
         box-shadow: 0px 0px 5px 0px rgba(143, 143, 143, 0.644);
         padding: 0.75rem;
         text-align: center;
+    }
+    
+    .song_buttons>i:hover {
+        font-size: calc(100% + 5px);
+        transition: all 1s;
     }
     
     .lengh:hover .lengh_15 {
