@@ -564,6 +564,7 @@
     
     .card:hover i {
         display: block;
+        color: var(--lighter);
         font-size: 80px;
         filter: opacity(1);
     }
